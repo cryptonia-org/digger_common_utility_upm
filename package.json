@@ -1,0 +1,14 @@
+{
+    "name": "com.shroomgames.commonutility",
+    "displayName": "Common Utility",
+    "version": "1.0.0",
+    "description": "Commonly used modules and extensions.",
+    "unity": "2022.3",
+    "dependencies": 
+	{
+		"com.unity.nuget.newtonsoft-json": "3.2.1",
+		"com.omicronperson.disposablesubscriptions": "1.0.0",
+		"com.unity.textmeshpro": "3.0.6"
+	},
+    "keywords": []
+}

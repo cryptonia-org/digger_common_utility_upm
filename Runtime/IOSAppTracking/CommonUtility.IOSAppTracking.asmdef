@@ -1,0 +1,17 @@
+{
+    "name": "CommonUtility.IOSAppTracking",
+    "rootNamespace": "",
+    "references": [
+        "CommonUtility.Logger",
+		"Unity.Advertisement.IosSupport"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
