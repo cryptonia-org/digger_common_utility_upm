@@ -1,7 +1,7 @@
 {
     "name": "com.shroomgames.commonutility",
     "displayName": "Common Utility",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Commonly used modules and extensions.",
     "unity": "2022.3",
     "dependencies": 
