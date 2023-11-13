@@ -9,10 +9,10 @@ namespace CommonUtility.SceneManagement
 {
     public static class SceneLoader
     {
-        private static readonly Updatable<SceneType> _current = new Updatable<SceneType>((SceneType)0);
+        private static readonly Updatable<int> _current = new Updatable<int>(0);
         private static AsyncOperation _loading;
 
-        public static IUpdatable<SceneType> Current => _current;
+        public static IUpdatable<int> Current => _current;
 
         private static bool Loading => _loading != null && _loading.isDone == false;
 
@@ -21,7 +21,7 @@ namespace CommonUtility.SceneManagement
             if (Loading)
                 throw new InvalidOperationException("Scene already loading");
 
-            AsyncOperation loading = SceneManager.LoadSceneAsync((int)args.Scene, LoadSceneMode.Single);
+            AsyncOperation loading = SceneManager.LoadSceneAsync(args.Scene, LoadSceneMode.Single);
             _loading = loading;
 
             while (loading.isDone == false)

@@ -2,6 +2,6 @@
 {
     public interface ISceneArgs
     {
-        public SceneType Scene { get; }
+        public int Scene { get; }
     }
 }
