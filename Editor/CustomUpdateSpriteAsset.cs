@@ -1,14 +1,19 @@
+#if UNITY_EDITOR
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TextCore;
+#endif
 
 namespace CommonUtility.Editor
 {
     public class CustomUpdateSpriteAsset
     {
+
+#if UNITY_EDITOR
+
         [MenuItem("Assets/Update TMP_SpriteAsset", true)]
         private static bool UpdateSpriteAsset()
         {
@@ -115,5 +120,8 @@ namespace CommonUtility.Editor
             EditorUtility.SetDirty(spriteAsset);
             AssetDatabase.SaveAssetIfDirty(spriteAsset);
         }
+
+#endif
+
     }
 }
