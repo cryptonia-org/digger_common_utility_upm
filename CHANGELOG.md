@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.0.5 (December 28, 2023)
++ com.unity.ads.ios-support in dependencies
+
 ### 1.0.3 (November 13, 2023)
 + Change SceneType from enum to int
 
