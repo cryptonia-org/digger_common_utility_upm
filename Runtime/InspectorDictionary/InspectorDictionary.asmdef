@@ -1,10 +1,6 @@
 {
-    "name": "CommonUtility.Editor",
-    "rootNamespace": "",
-    "references": [
-        "Unity.TextMeshPro",
-        "InspectorDictionary"
-    ],
+	"name": "InspectorDictionary",
+	"references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

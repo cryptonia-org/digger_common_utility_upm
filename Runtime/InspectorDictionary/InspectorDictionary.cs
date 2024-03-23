@@ -14,7 +14,7 @@ namespace CommonUtility
             public TPairValue Value;
         }
 
-        [SerializeField]
+        [SerializeField, InspectorDictionaryPair]
         private List<Pair<TKey, TValue>> _values;
 
         private Dictionary<TKey, TValue> _dictionary;

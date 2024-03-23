@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.0.6 (Martch 24, 2024)
++ polish InspectorDictionary inspector view
+
 ### 1.0.5 (December 28, 2023)
 + com.unity.ads.ios-support in dependencies
 

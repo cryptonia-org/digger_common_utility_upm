@@ -91,33 +91,6 @@ namespace CommonUtility.Extensions
 #endif
         }
 
-        public static void SaveTexture(Color[,] colors, string name)
-        {
-#if UNITY_EDITOR
-            System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(colors.GetLength(0), colors.GetLength(1));
-            for (int x = 0; x < bitmap.Width; x++)
-            {
-                for (int y = 0; y < bitmap.Height; y++)
-                {
-                    Color raw = colors[x, y];
-                    System.Drawing.Color color =
-                        System.Drawing.Color.FromArgb(
-                            Mathf.RoundToInt(raw.a * 255f),
-                            Mathf.RoundToInt(raw.r * 255f),
-                            Mathf.RoundToInt(raw.g * 255f),
-                            Mathf.RoundToInt(raw.b * 255f));
-
-                    bitmap.SetPixel(x, y, color);
-                }
-            }
-
-            string path = $"{Application.persistentDataPath}\\{name}_{DateTime.UtcNow.Ticks % 10000}.png";
-            bitmap.Save(path);
-            Debug.Log($"image saved at {path}");
-            bitmap.Dispose();
-#endif
-        }
-
         private static void Register(Object obj) => _toDestroy.Add((TimeSinceStartup, obj));
 
         private static void ClearOld()
