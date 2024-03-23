@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.0.7 (Martch 24, 2024)
++ polish InspectorDictionary inspector view
+
 ### 1.0.6 (Martch 24, 2024)
 + polish InspectorDictionary inspector view
 
