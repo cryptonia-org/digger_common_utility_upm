@@ -3,9 +3,11 @@
     "rootNamespace": "",
     "references": [
         "CommonUtility.Logger",
-		"Unity.Advertisement.IosSupport"
+        "Unity.Advertisement.IosSupport"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "iOS"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

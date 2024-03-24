@@ -1,6 +1,8 @@
 # Common Utility
 
 ## Changelog
+### 1.1.0 (Martch 24, 2024)
++ major update, added inspector field for interfaces, and more
 
 ### 1.0.7 (Martch 24, 2024)
 + polish InspectorDictionary inspector view
