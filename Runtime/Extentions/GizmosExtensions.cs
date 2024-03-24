@@ -15,6 +15,18 @@ namespace CommonUtility.Extensions
 
         private static long TimeSinceStartup => (long)DateTime.Now.ToUniversalTime().Subtract(new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalMilliseconds;
 
+        public static void DrawCube(Transform relative, Vector3 scale, Color color) => DrawCube(relative.localToWorldMatrix, scale * 0.5f, scale, color);
+
+        public static void DrawCube(Transform relative, Vector3 center, Vector3 scale, Color color) => DrawCube(relative.localToWorldMatrix, center, scale, color);
+
+        public static void DrawCube(Matrix4x4 matrix, Vector3 center, Vector3 scale, Color color) => DrawRelative(matrix, color, () => Gizmos.DrawCube(center, scale));
+
+        public static void DrawWireCube(Transform relative, Vector3 scale, Color color) => DrawWireCube(relative.localToWorldMatrix, scale * 0.5f, scale, color);
+
+        public static void DrawWireCube(Transform relative, Vector3 center, Vector3 scale, Color color) => DrawWireCube(relative.localToWorldMatrix, center, scale, color);
+
+        public static void DrawWireCube(Matrix4x4 matrix, Vector3 center, Vector3 scale, Color color) => DrawRelative(matrix, color, () => Gizmos.DrawWireCube(center, scale));
+
         public static void DrawText(string text, Vector3 worldPosition, Color textColor, Vector2 anchor, float textSize = 15f)
         {
 #if UNITY_EDITOR
@@ -111,6 +123,20 @@ namespace CommonUtility.Extensions
 
                 _toDestroy.RemoveAt(i);
             }
+        }
+
+        private static void DrawRelative(Matrix4x4 matrix, Color color, Action draw)
+        {
+            Matrix4x4 oldMatrix = Gizmos.matrix;
+            Color oldColor = Gizmos.color;
+
+            Gizmos.color = color;
+            Gizmos.matrix = matrix;
+
+            draw?.Invoke();
+
+            Gizmos.matrix = oldMatrix;
+            Gizmos.color = oldColor;
         }
     }
 }
