@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.1.5 (Martch 25, 2024)
++ fix attributes draw again
+
 ### 1.1.4 (Martch 25, 2024)
 + fix attributes draw
 
