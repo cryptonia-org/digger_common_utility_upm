@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.1.4 (Martch 25, 2024)
++ fix attributes draw
+
 ### 1.1.1 (Martch 25, 2024)
 + add gizmos draw relative cubes
 
