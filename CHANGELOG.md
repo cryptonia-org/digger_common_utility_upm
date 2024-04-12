@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.2.0 (April 12, 2024)
++ jobjectExtensions polish
+
 ### 1.1.5 (Martch 25, 2024)
 + fix attributes draw again
 
