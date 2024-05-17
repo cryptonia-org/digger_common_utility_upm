@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 1.2.1 (May 17, 2024)
+- remove com.unity.ads.ios-support
+
 ### 1.2.0 (April 12, 2024)
 + jobjectExtensions polish
 
